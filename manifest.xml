@@ -1,0 +1,31 @@
+<DesktopFormFactor>
+  <FunctionFile resid="funcFile" />
+  <ExtensionPoint xsi:type="MessageReadCommandSurface">
+    <OfficeTab id="TabDefault">
+      <Group id="msgReadGroup">
+        <Label resid="groupLabel" />
+        <Control xsi:type="Button" id="msgReadOpenPaneButton">
+          <Label resid="paneReadButtonLabel" />
+          <Supertip>
+            <Title resid="paneReadButtonLabel" />
+            <Description resid="paneReadButtonDesc" />
+          </Supertip>
+          <Icon>
+            <bt:Image size="16" resid="icon16" />
+            <bt:Image size="32" resid="icon32" />
+            <bt:Image size="80" resid="icon80" />
+          </Icon>
+          <Action xsi:type="ExecuteFunction">
+            <FunctionName>generateDeepLink</FunctionName>
+          </Action>
+        </Control>
+      </Group>
+    </OfficeTab>
+  </ExtensionPoint>
+</DesktopFormFactor>
+
+<Resources>
+  <bt:Urls>
+    <bt:Url id="funcFile" DefaultValue="https://localhost:3000/commands.html" /> 
+  </bt:Urls>
+  </Resources>
